@@ -1,9 +1,14 @@
-var resumeToHTML = require(__dirname + '/..');
-var fs = require('fs');
 var path = require('path');
+var fs = require('fs');
 
-var resumeObject = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'resume.json'), 'utf8'));
+var resumeToJSONLD = require(path.join(__dirname, '..', 'lib', 'converter'));
 
-resumeToHTML(resumeObject, {theme: 'modern'}, function (html, errs) {
-	fs.writeFileSync(__dirname + '/resume.html', html);
+// Use the default resume from the schema
+var input = require('resume-schema').resumeJson;
+var output = path.resolve(__dirname, 'resume.jsonld');
+
+resumeToJSONLD(input, function (err, result) {
+    fs.writeFile(output, JSON.stringify(result, null, '  '), function(err){
+        console.log(err ? 'Error: ' + err : 'Wrote ' + output)
+    });
 });

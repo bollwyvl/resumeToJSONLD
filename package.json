@@ -1,27 +1,24 @@
 {
-  "name": "resume-to-html",
-  "version": "0.0.21",
-  "description": "resumeToHTML",
+  "name": "resume-to-jsonld",
+  "version": "0.0.1",
+  "description": "resumeToJSONLD",
   "main": "lib/converter.js",
   "scripts": {
     "test": "node ./test/index.js | tap-spec"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/thomasdavis/resumeToHTML.git"
+    "url": "git://github.com/jsonresume/resumeToJSONLD.git"
   },
-  "author": "",
+  "author": "nicholas bollweg",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/thomasdavis/resumeToHTML/issues"
+    "url": "https://github.com/jsonresume/resumeToJSONLD/issues"
   },
   "dependencies": {
-    "gravatar": "^1.0.6",
+    "jsonld": "^0.2.15",
     "lodash": "^2.4.1",
-    "marked": "~0.3.2",
-    "mustache": "~2.0.0",
-    "resume-schema": "latest",
-    "resume-to-markdown": "latest"
+    "resume-schema": "latest"
   },
   "devDependencies": {
     "tap-spec": "^0.2.0",

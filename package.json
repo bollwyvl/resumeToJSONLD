@@ -18,7 +18,7 @@
   "dependencies": {
     "jsonld": "^0.2.15",
     "lodash": "^2.4.1",
-    "resume-schema": "latest"
+    "resume-schema": "git://github.com/bollwyvl/resume-schema#jsonld"
   },
   "devDependencies": {
     "tap-spec": "^0.2.0",
